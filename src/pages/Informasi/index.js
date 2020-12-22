@@ -1,5 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, Text, View, ImageBackground, } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+} from 'react-native';
 import {ListOffices} from '../../components';
 import {colors, fonts} from '../../utils';
 import {
@@ -13,21 +19,21 @@ import {Fire} from '../../config';
 
 const Informasi = ({navigation}) => {
   const [info, setInfo] = useState([]);
- 
+
   useEffect(() => {
     Fire.database()
       .ref('info/')
       .once('value')
-      .then(res => {
+      .then((res) => {
+        console.log('🚀 ~ file: index.js ~ line 28 ~ .then ~ res', res.val());
         if (res.val()) {
           setInfo(res.val());
         }
       })
-      .catch(err => {
+      .catch((err) => {
         showError(err.message);
       });
   }, []);
-
 
   return (
     <View style={styles.page}>
@@ -37,19 +43,17 @@ const Informasi = ({navigation}) => {
       </ImageBackground>
       <View style={styles.content}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          {info.map(item => {
+          {info.map((item) => {
             return (
               <ListInformasi
-                 key={`info-${item.id}`}
+                key={`info-${item.id}`}
                 title={item.title}
                 price={item.price}
                 image={item.image}
-                onPress={() =>
-                navigation.navigate('Detail', {item: title})
-                  }
-                />
-              );
-            })}
+                onPress={() => navigation.navigate('Detail', {item: item})}
+              />
+            );
+          })}
         </ScrollView>
       </View>
     </View>
