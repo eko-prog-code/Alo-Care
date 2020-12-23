@@ -6,11 +6,13 @@ const ListInformasi = ({title, price, image, onPress}) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image source={{uri: image}} style={styles.picture} />
-      <View>
-        <Text style={styles.title}>{title}</Text>
+      <View style={styles.body}>
+        <Text numberOfLines={1} style={styles.title}>
+          {title}
+        </Text>
         <Text style={styles.title}>{price}</Text>
       </View>
-     </TouchableOpacity>
+    </TouchableOpacity>
   );
 };
 
@@ -22,6 +24,9 @@ const styles = StyleSheet.create({
     padding: 16,
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
+  },
+  body: {
+    width: '70%',
   },
   picture: {width: 80, height: 60, borderRadius: 11, marginRight: 16},
   title: {
