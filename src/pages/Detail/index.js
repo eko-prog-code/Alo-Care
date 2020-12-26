@@ -49,7 +49,18 @@ const Informasi = (props) => {
         <Text style={styles.desc}>Alo Care</Text>
       </ImageBackground>
       <View style={styles.content}>
-        <ScrollView showsVerticalScrollIndicator={false}></ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Text style={styles.body}>{detail && detail.body}</Text>
+          <Text style={styles.part}>{detail && detail.part1}</Text>
+          <Text style={styles.part}>{detail && detail.part2}</Text>
+          <Text style={styles.part}>{detail && detail.part3}</Text>
+          <Text style={styles.part}>{detail && detail.part4}</Text>
+          <Text style={styles.part}>{detail && detail.part5}</Text>
+          <Text style={styles.part}>{detail && detail.part6}</Text>
+          <Text style={styles.part}>{detail && detail.part7}</Text>
+          <Text style={styles.part}>{detail && detail.part8}</Text>
+          <Text style={styles.part}>{detail && detail.part9}</Text>
+        </ScrollView>
       </View>
     </View>
   );
@@ -65,6 +76,19 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary[600],
     color: colors.white,
     textAlign: 'center',
+  },
+  body: {
+    fontSize: 16,
+    padding: 16,
+    fontFamily: fonts.primary[600],
+    color: colors.text.primary,
+  },
+  part: {
+    fontSize: 16,
+    padding: 4,
+    paddingLeft: 16,
+    fontFamily: fonts.primary.normal,
+    color: colors.text.primary,
   },
   desc: {
     fontSize: 14,
