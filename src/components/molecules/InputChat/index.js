@@ -8,8 +8,9 @@ const InputChat = ({value, onChangeText, onButtonPress, targetChat}) => {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder={`Tulis Pesan Untuk ${targetChat.data.fullName}`}
+        placeholder={`Tulis Pesan`}
         value={value}
+        multiline={true}
         onChangeText={onChangeText}
       />
       <Button
@@ -24,7 +25,7 @@ const InputChat = ({value, onChangeText, onButtonPress, targetChat}) => {
 export default InputChat;
 
 const styles = StyleSheet.create({
-  container: {padding: 16, flexDirection: 'row', backgroundColor: colors.white},
+  container: {padding: 16, flexDirection: 'row', backgroundColor: colors.white, alignItems:"flex-end"},
   input: {
     backgroundColor: colors.disable,
     padding: 14,
@@ -33,6 +34,6 @@ const styles = StyleSheet.create({
     marginRight: 10,
     fontSize: 14,
     fontFamily: fonts.primary.normal,
-    maxHeight: 45,
+    maxHeight: 100,
   },
 });
