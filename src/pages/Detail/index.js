@@ -49,18 +49,17 @@ const Informasi = (props) => {
         <Text style={styles.desc}>Alo Care</Text>
       </ImageBackground>
       <View style={styles.content}>
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <Text style={styles.body}>{detail && detail.body}</Text>
-          <Text style={styles.part}>{detail && detail.part1}</Text>
-          <Text style={styles.part}>{detail && detail.part2}</Text>
-          <Text style={styles.part}>{detail && detail.part3}</Text>
-          <Text style={styles.part}>{detail && detail.part4}</Text>
-          <Text style={styles.part}>{detail && detail.part5}</Text>
-          <Text style={styles.part}>{detail && detail.part6}</Text>
-          <Text style={styles.part}>{detail && detail.part7}</Text>
-          <Text style={styles.part}>{detail && detail.part8}</Text>
-          <Text style={styles.part}>{detail && detail.part9}</Text>
-        </ScrollView>
+        <Text selectable={true} style={styles.body}>{detail && detail.body}</Text>
+        <Text selectable={true} style={styles.part}>{detail && detail.part1}</Text>
+        <Text selectable={true} style={styles.part}>{detail && detail.part2}</Text>
+        <Text selectable={true} style={styles.part}>{detail && detail.part3}</Text>
+        <Text selectable={true} style={styles.part}>{detail && detail.part4}</Text>
+        <Text selectable={true} style={styles.part}>{detail && detail.part5}</Text>
+        <Text selectable={true} style={styles.part}>{detail && detail.part6}</Text>
+        <Text selectable={true} style={styles.part}>{detail && detail.part7}</Text>
+        <Text selectable={true} style={styles.part}>{detail && detail.part8}</Text>
+        <Text selectable={true} style={styles.part}>{detail && detail.part9}</Text>
+        <ScrollView showsVerticalScrollIndicator={false}></ScrollView>
       </View>
     </View>
   );
