@@ -10,7 +10,10 @@ const GetStarted = ({navigation}) => {
       <View>
         <ILLogo />
         <Text style={styles.title}>
-         Home Care Area Karawang
+         Jasa Layanan Modern berbasis Digital
+        </Text>
+        <Text style={styles.body}>
+         untuk peningkatan kualitas hidup
         </Text>
       </View>
       <View>
@@ -40,6 +43,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
+    marginTop: 91,
+    color: colors.white,
+    fontFamily: fonts.primary[600],
+  },
+  body: {
+    fontSize: 20,
     marginTop: 91,
     color: colors.white,
     fontFamily: fonts.primary[600],

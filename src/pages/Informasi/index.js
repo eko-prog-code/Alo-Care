@@ -38,7 +38,7 @@ const Informasi = ({navigation}) => {
   return (
     <View style={styles.page}>
       <ImageBackground source={ILOfficesBG} style={styles.background}>
-        <Text style={styles.title}>Detail Informasi</Text>
+        <Text style={styles.title}>Informasi</Text>
         <Text style={styles.desc}>Alo Care</Text>
       </ImageBackground>
       <View style={styles.content}>
@@ -48,6 +48,16 @@ const Informasi = ({navigation}) => {
               <ListInformasi
                 key={`info-${item.id}`}
                 title={item.title}
+                body={item.body}
+                part1={item.part1}
+                part2={item.part2}
+                part3={item.part3}
+                part4={item.part4}
+                part5={item.part5}
+                part6={item.part6}
+                part7={item.part7}
+                part8={item.part8}
+                part9={item.part9}
                 price={item.price}
                 image={item.image}
                 onPress={() => navigation.navigate('Detail', {item: item})}
