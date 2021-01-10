@@ -51,7 +51,7 @@ const Login = ({navigation}) => {
           secureTextEntry
         />
         <Gap height={10} />
-        <Link title="Forgot My Password" size={12} />
+        <Link title="Forgot My Password" size={12} onPress={() => navigation.navigate('ForgotPass')}/>
         <Gap height={40} />
         <Button title="Sign In" onPress={login} />
         <Gap height={30} />

@@ -7,7 +7,7 @@ import {showError} from '../../utils';
 const UserProfile = ({navigation, route}) => {
   const profile = route.params;
 
-  const signOut = () => {
+  const SignOut = () => {
     Fire.auth()
       .signOut()
       .then(() => {
@@ -53,7 +53,7 @@ const UserProfile = ({navigation, route}) => {
         desc="Last Update Yesterday"
         type="next"
         icon="help"
-        onPress={signOut}
+        onPress={SignOut}
       />
     </View>
   );

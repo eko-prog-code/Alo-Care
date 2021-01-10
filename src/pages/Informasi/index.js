@@ -25,7 +25,7 @@ const Informasi = ({navigation}) => {
       .ref('info/')
       .once('value')
       .then((res) => {
-        console.log('🚀 ~ file: index.js ~ line 28 ~ .then ~ res', res.val());
+        // console.log('🚀 ~ file: index.js ~ line 28 ~ .then ~ res', res.val());
         if (res.val()) {
           setInfo(res.val());
         }
