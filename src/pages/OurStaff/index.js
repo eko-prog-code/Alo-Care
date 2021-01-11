@@ -15,7 +15,7 @@ const OurStaff = ({ navigation }) => {
   const [news, setNews] = useState([])
   const [categoryOurstaff, setCategoryOurstaff] = useState([])
   const [ourstaffs, setOurstaffs] = useState([])
-  const [userPoint, setUserPoint] = useState([])
+  const [userPoint, setUserPoint] = useState(null)
 
   const [profile, setProfile] = useState({
     photo: ILNullPhoto,
@@ -130,7 +130,7 @@ const OurStaff = ({ navigation }) => {
                 onPress={() => navigation.navigate('UserProfile', profile)}
               />
               <Text style={styles.point}>
-                Point Anda : {userPoint.length > 0 ? userPoint.point : 0}
+                Point Anda : {userPoint !== null ? userPoint.point : 0}
               </Text>
             </View>
             <Text style={styles.welcome}>
