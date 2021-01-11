@@ -34,7 +34,7 @@ const OurStaff = ({ navigation }) => {
 
   useEffect(() => {
     Fire.auth().onAuthStateChanged((data) => {
-      console.log('verif -> data', data.uid)
+      console.log('verif -> data', data)
       if (data) {
         getUserPoint(data.uid)
       }
@@ -130,7 +130,7 @@ const OurStaff = ({ navigation }) => {
                 onPress={() => navigation.navigate('UserProfile', profile)}
               />
               <Text style={styles.point}>
-                Point Anda : {userPoint ? userPoint.point : 0}
+                Point Anda : {userPoint.length > 0 ? userPoint.point : 0}
               </Text>
             </View>
             <Text style={styles.welcome}>
